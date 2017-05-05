@@ -4,7 +4,7 @@
 This is a personal repository for hosting my resolutions for the [Single Page Web Applications with AngularJS](https://www.coursera.org/learn/single-page-web-apps-with-angularjs) course assignments.
 
 ## Progress
-- [ ] Week 1
+- [x] Week 1
 - [ ] Week 2
 - [ ] Week 3
 - [ ] Week 4
