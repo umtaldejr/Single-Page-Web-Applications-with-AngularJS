@@ -19,7 +19,7 @@
     <div class="form-group">
       <button ng-click="checkIfTooMuch()" class="btn btn-default">Check If Too Much</button>
     </div>
-    <div class="form-group">
+    <div class="form-group alert" ng-show="showMessage()" ng-class="{'alert-danger': isErrorMessage(), 'alert-success': !isErrorMessage()}">
       {{message}}
     </div>
   </div>

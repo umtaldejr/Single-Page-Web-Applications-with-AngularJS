@@ -11,6 +11,8 @@
     $scope.items_str = '';
     $scope.message = '';
     $scope.checkIfTooMuch = checkIfTooMuch;
+    $scope.showMessage = showMessage;
+    $scope.isErrorMessage = isErrorMessage;
 
     /**
      * @desc Call the necessary functions for displaying the appropriate message.
@@ -22,6 +24,25 @@
 
       $scope.message = appropriate_message;
     };
+
+    /**
+     @desc Validate if there's a message to show.
+     @return {boolean}
+     */
+    function showMessage() {
+      var showMessage = ($scope.message != '');
+      return showMessage;
+    };
+
+    /**
+     @desc Validate if the message is an error message.
+     @return {boolean}
+     */
+    function isErrorMessage() {
+      var isErrorMessage = ($scope.message === 'Please enter data first');
+      return isErrorMessage;
+    };
+
 
     /**
      * @desc Process a string with an items list.
