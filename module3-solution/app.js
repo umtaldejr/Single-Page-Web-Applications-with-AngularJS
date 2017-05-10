@@ -40,14 +40,19 @@
     ctrl.narrowItDown = narrowItDown;
     ctrl.removeItem = removeItem;
 
+    ctrl.isLoading = false;
+
     function narrowItDown() {
+      ctrl.isLoading = true;
       var promise = MenuSearchService.getMatchedMenuItems(ctrl.searchTerm);
       promise.then(
         function(foundItems) {
           ctrl.foundItems = foundItems;
+          ctrl.isLoading = false;
         },
         function(result) {
           ctrl.foundItems = [];
+          ctrl.isLoading = false;
         }
       );
     };
