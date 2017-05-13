@@ -5,7 +5,7 @@
     .component('categories', {
       template: '<ul>' +
         '<li ng-repeat="category in $ctrl.categories">' +
-        '<a href="#">' +
+        '<a ui-sref="items({short_name: \'{{category.short_name}}\'})">' +
         '{{category.id}} <span>{{category.name}}</span>' +
         '</a>' +
         '</li>' +
