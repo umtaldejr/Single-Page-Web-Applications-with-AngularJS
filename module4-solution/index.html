@@ -11,10 +11,22 @@
   <link rel="stylesheet" href="lib/bootstrap.min.css">
 </head>
 
-<body>
+<body ng-app="MenuApp">
   <div class="container">
     <ui-view></ui-view>
   </div>
+
+  <!-- Modules -->
+  <script src="app/menuapp.module.js"></script>
+  <script src="app/data.module.js"></script>
+  <!-- Routes -->
+  <script src="app/routes.js"></script>
+  <!-- Components -->
+  <script src="app/categories.component.js"></script>
+  <script src="app/items.component.js"></script>
+  <!-- Services -->
+  <script src="app/menudata.service.js"></script>
+
 </body>
 
 </html>
