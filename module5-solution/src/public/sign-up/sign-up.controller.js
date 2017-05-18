@@ -4,12 +4,14 @@
   angular.module('public')
     .controller('SignUpController', SignUpController);
 
-  SignUpController.$inject = ['menuCategories'];
+  SignUpController.$inject = ['menuCategories', 'UserInfoService'];
 
-  function SignUpController(menuCategories) {
+  function SignUpController(menuCategories, UserInfoService) {
     var $ctrl = this;
 
     $ctrl.pageClass = 'sign-up';
+
+    $ctrl.submitSuccess = false;
 
     $ctrl.menuCategories = menuCategories.map(function(category) {
       return category.short_name;
@@ -19,8 +21,21 @@
       return $ctrl.menuCategories.indexOf(favorite) === -1;
     };
 
-    // TODO
-    $ctrl.submitForm = function() {};
+    $ctrl.submitForm = function() {
+
+      var info = {
+        firstname: $ctrl.firstname,
+        lastname: $ctrl.lastname,
+        email: $ctrl.email,
+        telephone: $ctrl.telephone,
+        favorite: menuCategories.find(function(category) {
+          return category.short_name === $ctrl.favorite;
+        })
+      };
+
+      UserInfoService.saveInfo(info);
+      $ctrl.submitSuccess = true;
+    };
   }
 
 })();
