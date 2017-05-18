@@ -5,7 +5,8 @@
     .component('menuItem', {
       templateUrl: 'src/public/menu-item/menu-item.html',
       bindings: {
-        menuItem: '<'
+        menuItem: '<',
+        category: '<'
       },
       controller: MenuItemController
     });
