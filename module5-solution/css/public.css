@@ -1,3 +1,31 @@
+/* SIGNUP PAGE */
+
+.sign-up form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sign-up form>* {
+  margin: 0px 5px 10px;
+  flex: 0 0 300px;
+}
+
+.sign-up form>button {
+  margin-top: 5px;
+}
+
+.sign-up>div>h4 {
+  text-align: center;
+}
+
+
+/* END SIGNUP PAGE */
+
+
 /* HOME PAGE */
 
 .container .jumbotron {

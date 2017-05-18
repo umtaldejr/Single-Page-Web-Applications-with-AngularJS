@@ -1,0 +1,32 @@
+<div class="container {{signUpCtrl.pageClass}}">
+  <div class="row">
+    <form name="signUpForm" novalidate>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" name="firstname" ng-model="firstname" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" name="lastname" ng-model="lastname" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" ng-model="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="telephone">Telephone</label>
+        <input type="text" class="form-control" name="telephone" ng-model="telephone" placeholder="Telephone" pattern="\d*">
+      </div>
+      <div class="form-group">
+        <label for="favorite">Favorite Dish</label>
+        <input type="text" class="form-control" name="favorite" ng-model="favorite" placeholder="Favorite Dish" required>
+      </div>
+      <button type="submit" class="btn btn-default" ng-disabled="signUpForm.$invalid || signUpCtrl.isntValid(signUpForm.favorite.$viewValue)" ng-click="signUpCtrl.submitForm()">Submit</button>
+    </form>
+    <div class="form-errors">
+      <p ng-show="signUpForm.favorite.$error.required && signUpForm.favorite.$touched">Favorite Dish is required.</p>
+      <p ng-show="signUpForm.favorite.$viewValue && signUpCtrl.isntValid(signUpForm.favorite.$viewValue)">No such menu number exists.</p>
+      <p ng-show="false">Your information has been saved</p> <!-- TODO -->
+    </div>
+  </div>
+</div>
