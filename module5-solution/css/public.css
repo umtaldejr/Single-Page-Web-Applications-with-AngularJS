@@ -26,6 +26,24 @@
 /* END SIGNUP PAGE */
 
 
+/* SIGNUP PAGE */
+
+.my-info menu-category {
+  margin: 0;
+  padding: 0;
+}
+
+.my-info .category-tile {
+  margin: 0;
+}
+
+.my-info .info-value{
+  padding-left: 15px;
+}
+
+/* END SIGNUP PAGE */
+
+
 /* HOME PAGE */
 
 .container .jumbotron {

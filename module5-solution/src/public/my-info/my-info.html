@@ -1,0 +1,21 @@
+<div class="container {{myInfoCtrl.pageClass}}">
+  <h3 ng-show="myInfoCtrl.notRegistered()">Not Signed Up Yet</h3>
+  <div ng-show="!myInfoCtrl.notRegistered()">
+    <h1>My Info</h1>
+    <hr />
+    <p ng-show="myInfoCtrl.info.firstname"><strong>Firstname:</strong>
+      <p class="info-value">{{myInfoCtrl.info.firstname}}</p>
+    </p>
+    <p ng-show="myInfoCtrl.info.lastname"><strong>Lastname:</strong>
+      <p class="info-value">{{myInfoCtrl.info.lastname}}</p>
+    </p>
+    <p ng-show="myInfoCtrl.info.email"><strong>Email:</strong>
+      <p class="info-value">{{myInfoCtrl.info.email}}</p>
+    </p>
+    <p ng-show="myInfoCtrl.info.telephone"><strong>Telephone:</strong>
+      <p class="info-value">{{myInfoCtrl.info.telephone}}</p>
+    </p>
+    <p ng-show="myInfoCtrl.info.firstname"><strong>Favorite:</strong></p>
+    <menu-category category="myInfoCtrl.info.favorite">
+  </div>
+</div>

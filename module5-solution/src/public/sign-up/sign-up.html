@@ -1,6 +1,6 @@
 <div class="container {{signUpCtrl.pageClass}}">
   <div class="row">
-    <form name="signUpForm" novalidate>
+    <form name="signUpForm" novalidate ng-hide="signUpCtrl.submitSuccess">
       <div class="form-group">
         <label for="firstname">First Name</label>
         <input type="text" class="form-control" name="firstname" ng-model="signUpCtrl.firstname" placeholder="First Name" required>
@@ -26,7 +26,7 @@
     <div class="form-errors">
       <p ng-show="signUpForm.favorite.$error.required && signUpForm.favorite.$touched">Favorite Dish is required.</p>
       <p ng-show="signUpForm.favorite.$viewValue && signUpCtrl.isntValid(signUpForm.favorite.$viewValue)">No such menu number exists.</p>
-      <p ng-show="signUpCtrl.submitSuccess">Your information has been saved</p>
+      <h3 ng-show="signUpCtrl.submitSuccess">Your information has been saved</h3>
     </div>
   </div>
 </div>
